@@ -1,78 +1,202 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>测试页面</title>
-  <meta name="author" content="messi20133">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-  <style>
-    * {
-      padding: 0px;
-      margin: 0px;
-    }
-    html {
-      height: 100%;
-    }
-    body {
-      height: 100%;
-    }
-    .container {
-      height: 100%;
-      width: 400px;
-      margin: 0 auto;
-      background: url(https://imagelx.yidianzixun.com/static/CmcRYlzG3HGAETseAACatomalOo395/45813956.jpg);
-      background-size: cover;
-    }
-    .form-container{
-      padding: 20px;
-      padding-top: 300px;
-    }
 
-  </style>
-</head>
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="zh-CN">
+	<head>
+		<base href="http://lykjcm.com:80/">
+		<link rel="shortcut icon" type="images/x-icon" href="http://lykjcm.com:80/public/shortcut/favicon.ico">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="expires" content="0">    
+		<meta http-equiv="keywords" content="翡翠,云南,赌石">
+		<meta http-equiv="description" content="云南翡翠">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>缅甸天然翡翠产地直供</title>
+		<link rel="stylesheet" href="http://lykjcm.com:80/public/image/css.css">
+		<link href="http://lykjcm.com:80/public/image/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="http://lykjcm.com:80/public/image/layer.css" id="layuicss-layer">
+		
+		
+		<!-- 字节跳动 -->
+		<script type="text/javascript" src="http://lykjcm.com:80/public/js/bytedance.js"></script>
+	</head>
 <body>
-  <div class="container">
-    <div class="form-container">
-      <div id="app">
-        <el-form :model="formInline" label-width="100px">
-          <el-form-item label="测试人员姓名">
-            <el-input v-model="formInline.user" placeholder="姓名"></el-input>
-          </el-form-item>
-          <el-form-item label="测试人员电话">
-            <el-input v-model="formInline.telephone" placeholder="电话"></el-input>
-          </el-form-item>
-          <div style="text-align: center">
-            <el-button type="primary"><span onclick="LXLOG.sendLog(11)">提交</span></el-button>
-          </div>
-        </el-form>
+	  
+  <div class="warp">
+	<input id="base_path_input" type="hidden" value="http://lykjcm.com:80/" />
+    <!-- 弹出层内容 -->
+    <div id="layer-wx" style="display: none;">
+      <p>微信号码复制成功，加微信免费咨询！</p>
+      <a id="wx-a" href="weixin://">请手动切换至微信添加好友</a>
+    </div>
+
+    <img src="http://lykjcm.com:80/public/image/1.jpg" alt="">
+    <img src="http://lykjcm.com:80/public/image/2.jpg" alt="">
+    <img src="http://lykjcm.com:80/public/image/3.jpg" alt="">
+    <!-- nav -->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="4" class=""></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item">
+          <img src="http://lykjcm.com:80/public/image/6.jpg" alt="">
+        </div>
+        
+        <div class="item">
+          <img src="http://lykjcm.com:80/public/replace/img1.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="http://lykjcm.com:80/public/replace/img2.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="http://lykjcm.com:80/public/image/5.jpg" alt="">
+        </div>
+        <div class="item active">
+          <img src="http://lykjcm.com:80/public/image/7.jpg" alt="">
+        </div>
+        
       </div>
     </div>
-  </div>
-  <!--
-
-    <div id="app">
-      <el-button @click="visible = true">Button</el-button>
-      <el-dialog :visible.sync="visible" title="Hello world">
-        <p>Try Element</p>
-      </el-dialog>
+    <div class="article">
+      <p>我们是一家专门从事珠宝翡翠原石销售以及雕刻、加工、批发、渠道加盟和市场的公司。公司成立于2006年初，公司总部地址云南省瑞丽市“以传播翡翠文化，树立行业典范”为宗旨，用更好的翡翠、工艺及服务打动更多消费者和团体。</p>
     </div>
-  -->
-  <script src="https://unpkg.com/vue/dist/vue.js"></script>
-  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-  <script>
-    new Vue({
-      el: '#app',
-      data: function() {
-        return { 
-          formInline: {
-            user: null,
-            telephone: null
-          }
-        }
-      }
-    });
+    <div class="wx">
+      <p class="blod">如果你有关于翡翠原石的需要，可以随时联系我们</p>
+      <p class="blod">微信号：&nbsp; <span class="wx-num">xq604398005</span></p>
+      <!-- 复制按钮 -->
+      <div class="fuzhiwx" data-clipboard-text="xq604398005" onclick="myfunction()">
+        <btn class="btn">点击复制微信号</btn>
+        <img class="djimg" src="http://lykjcm.com:80/public/image/dianji.gif" alt="" style="background:none;">
+      </div>
+    </div>
+    <img src="http://lykjcm.com:80/public/image/9.jpg" alt="">
+    <div class="article">
+      <p>很多人不能来到缅甸，只能通过图片来看翡翠，但是一些商家总是把颜色调得美美的发给客户，我们可不这样，必须在镜头下直播原石，才能给大看到翡翠原石最真实的样子，大家才能买的踏实放心。</p>
+    </div>
+    <img src="http://lykjcm.com:80/public/image/10.jpg" alt="">
+    <img src="http://lykjcm.com:80/public/image/11.jpg" alt="">
+    <div class="article">
+      <p>几乎每个月我们都会去缅甸的翡翠矿区挑选心仪的毛料，买到的毛料会运到自己的仓库，根据翡翠石不同场口和表现推荐给有需要的用户。</p>
+    </div>
+    <img src="http://lykjcm.com:80/public/image/12.jpg" alt="">
+    <div class="article">
+      <p>如今，经过连年被开采的矿山愈发贫瘠，导致市面上的高端翡翠越来越少见，价格也越涨越高。市面上出现了不少以次充好、以假充真的翡翠毛料，许多商家拿着假皮假色的毛料充当真品，价格还一路往上炒，飙升到了几十万甚至几百万的天价！把翡翠的市场搞得乌烟瘴气，想要买天然翡翠，出高价都不一定能买到。 </p>
+    </div>
+    <img src="http://lykjcm.com:80/public/image/13.jpg" alt="">
+    <img src="http://lykjcm.com:80/public/replace/huodong1.png" alt="">
+    <div class="wx">
+      <p class="blod">如果你有关于翡翠原石的需要，可以随时联系我们</p>
+      <p class="blod">微信号：&nbsp; <span class="wx-num">xq604398005</span></p>
+      <!-- 复制按钮 -->
+      <div class="fuzhiwx" data-clipboard-text="xq604398005" onclick="myfunction()">
+        <btn class="btn">点击复制微信号</btn>
+        <img class="djimg" src="http://lykjcm.com:80/public/image/dianji.gif" alt="" style="background:none;">
+      </div>
+    </div>
+    <img src="http://lykjcm.com:80/public/image/15.jpg" alt="">
+    <div class="article">
+      <p>大家都知道全球的翡翠原石基本都来自缅甸，要想拿到翡翠原石，那闯荡缅甸矿区拿货，深入缅甸各大场口是不可避免的，这十几年来本公司对这条路可是在熟悉不过了。所以说买翡翠从源头买才是最好的，在大家都在炒作价格的时候，我们不能说价格是最低的，但是我们绝对是性价比最高的。</p>
+    </div>
+    <img src="http://lykjcm.com:80/public/image/16.jpg" alt="">
+    <img src="http://lykjcm.com:80/public/image/17.jpg" alt="">
+    <div class="article">
+      <p>如今，经过连年被开采的矿山愈发贫瘠，导致市面上的高端翡翠越来越少见，价格也越涨越高。市面上出现了不少以次充好、以假充真的翡翠毛料，许多商家拿着假皮假色的毛料充当真品，价格还一路往上炒，飙升到了几十万甚至几百万的天价！把翡翠的市场搞得乌烟瘴气，想要买天然翡翠，出高价都不一定能买到。</p>
+    </div>
+    <img src="http://lykjcm.com:80/public/image/18.jpg" alt="">
+    <img src="http://lykjcm.com:80/public/image/19.jpg" alt="">
+    <div class="wx">
+      <p class="blod">如果你有关于翡翠原石的需要，可以随时联系我们</p>
+      <p class="blod">微信号：&nbsp; <span class="wx-num">xq604398005</span></p>
+      <!-- 复制按钮 -->
+      <div class="fuzhiwx" data-clipboard-text="xq604398005" onclick="myfunction()">
+        <btn class="btn">点击复制微信号</btn>
+        <img class="djimg" src="http://lykjcm.com:80/public/image/dianji.gif" alt="" style="background:none;">
+      </div>
+    </div>
+    <img src="http://lykjcm.com:80/public/image/20.jpg" alt="">
+    <img src="http://lykjcm.com:80/public/image/21.jpg" alt="">
+    <img src="http://lykjcm.com:80/public/image/22.jpg" alt="">
+    <img src="http://lykjcm.com:80/public/image/23.jpg" alt="">
+    <img src="http://lykjcm.com:80/public/image/24.jpg" alt="">
+    <img src="http://lykjcm.com:80/public/image/25.jpg" alt="">
+    <img src="http://lykjcm.com:80/public/image/26.jpg" alt="">
+    <img src="http://lykjcm.com:80/public/image/27.jpg" alt="">
+    <img src="http://lykjcm.com:80/public/image/28.jpg" alt="">
+    <div class="wx">
+      <p class="blod">如果你有关于翡翠原石的需要，可以随时联系我们</p>
+      <p class="blod">微信号：&nbsp; <span class="wx-num">xq604398005</span></p>
+      <!-- 复制按钮 -->
+      <div class="fuzhiwx" data-clipboard-text="xq604398005" onclick="myfunction()">
+        <btn class="btn">点击复制微信号</btn>
+        <img class="djimg" src="http://lykjcm.com:80/public/image/dianji.gif" alt="" style="background:none;">
+      </div>
+    </div>
+    <img src="http://lykjcm.com:80/public/image/29.jpg" alt="">
+    <div class="wx">
+      <p class="blod">如果你有关于翡翠原石的需要，可以随时联系我们</p>
+      <p class="blod">微信号：&nbsp; <span class="wx-num">xq604398005</span></p>
+      <!-- 复制按钮 -->
+      <div class="fuzhiwx" data-clipboard-text="xq604398005" onclick="myfunction()">
+        <btn class="btn">点击复制微信号</btn>
+        <img class="djimg" src="http://lykjcm.com:80/public/image/dianji.gif" alt="" style="background:none;">
+      </div>
+    </div>
+    
+    <div class="banquan">
+      <p>©2010-2019 深圳市美淘淘商贸有限公司</p>
+    </div>
+    <!-- left-content -->
+    <div class="left-content">
+      <img src="http://lykjcm.com:80/public/image/icon.jpg" alt="">
+      <p class="blod">老师从小跟随祖辈经营翡翠，用自己多年的实践经验，教你如何看懂翡翠，买到性价比高的翡翠，扫码关注更有翡翠礼品相送！</p>
+      <p class="left-wx">扫码关注</p>
+      <img id="wecharImg" src="http://lykjcm.com:80/domain/lykjcm/specify/img/wechar/wechar-small.jpg" alt="">
+      <p class="blod">微信扫描上方老师二维码、或添加老师微信：</p>
+      <p class="left-wx">xq604398005</p>
+    </div>
+    <div style="margin-bottom:60px">
+
+    </div>
+    <div class="footer">
+      <div class="left-bot">
+        <p>如果你有任何关于翡翠原石的需要</p>
+        <p>加翡翠顾问微信:&nbsp; <span class="wx-num">xq604398005</span> </p>
+      </div>
+      <div class="right-bot">
+        <p class="fuzhiwx" data-clipboard-text="xq604398005" onclick="myfunction()">复制微信号</p>
+      </div>
+    </div>
+
+
+  </div>
+
+  <script src="http://lykjcm.com:80/public/image/jquery.min.js"></script>
+  <script src="http://lykjcm.com:80/public/image/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $('.carousel').carousel({
+      interval: 2000
+    })
   </script>
-  <script src="https://jcslx.yidianzixun.com/static/CmcRYlzCzSyEfP7kAAAAAAAAAAA0778/ydlx_v001.js"></script><script>;LXLOG.addParams({"k":"11,1046,H5联调测试,4,698383226"})</script>
+  <!-- 引用弹出层JS -->
+  <script src="http://lykjcm.com:80/public/image/clipboard.min.js"></script>
+  <script type="text/javascript" src="http://lykjcm.com:80/public/image/layer.js"></script>
+  <script type="text/javascript" src="http://lykjcm.com:80/public/image/layer.wx.js"></script>
+
+  <!-- swt -->
+  
+  
+  	<!-- 更换微信图片 -->
+  	<script type="text/javascript" src="http://lykjcm.com:80/domain/lykjcm/specify/js/changeWecharImg.js"></script>
+	
+	<!--站长工具-->
+	<script type="text/javascript" src="http://lykjcm.com:80/domain/lykjcm/specify/js/cnzz/cnzz.js"></script>	
 </body>
 </html>
